@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>艾多美注册★★晴赢团队★★★</title>
+    <meta name="keywords" content="艾多美注册,艾多美亲友号,亲友号" />
+    <meta name="description" content="艾多美注册相关资料，同时提供亲友号以供快速注册" />
+    <style>
+        body {
+            color: #1a1a1a;
+            font-family: -apple-system,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Microsoft YaHei,Source Han Sans SC,Noto Sans CJK SC,WenQuanYi Micro Hei,sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #00b6f0;
+            color: #fff;
+            margin: 4px auto 4px auto;
+        }
+
+        #hs {
+            margin: 0px;
+            padding: 0px;
+        }
+
+            #hs li {
+                list-style: none;
+                display: inline;
+                margin: 0px;
+                padding: 2px 4px;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        艾多美快速注册，联系微信:<a href="#wechat">AtomySupport</a>
+    </header>
+    <main>
+        <section>
+            <h1>艾多美注册网址</h1>
+            <p>
+                <ul>
+                    <li>
+                        大陆官网电脑版注册地址:<a href="http://www.atomychina.com.cn" target="_blank">http://www.atomychina.com.cn</a>
+                    </li>
+                    <li>
+                        大陆官网手机版注册地址:<a href="https://m.atomychina.com.cn/" target="_blank">https://m.atomychina.com.cn/</a>
+                    </li>
+                    <li>
+                        台湾官网电脑版注册地址:<a href="http://www.atomy.com/tw/Home" target="_blank">http://www.atomy.com/tw/Home</a>
+                    </li>
+                </ul>
+            </p>
+        </section>
+        <section>
+            <h1>为什么现在要注册艾多美</h1>
+            <ul>
+                <li>艾多美商品物美廉价、品类广,注册会员享75折左右,类似网上超市你不是也同样也是淘宝京东会员嘛</li>
+                <li>艾多美会员是口碑传、邀请制，您推荐注册的会员消费您终身享返点。这块好比淘宝京东的盖楼返点，只是这是<strong>终身制</strong></li>
+                <li>如果你有京东淘宝微商推广经历（类似淘宝客）,更要早入局，即便不是财务自由，至少秒杀之前的推广，前提要早。</li>
+                <li>至少在注册成功后，要加我微信，告知注意事项，防止断线；并进团队群</li>
+            </ul>
+        </section>
+        <section>
+            <h1>亲友账号</h1>
+            <small>注册时填写的亲友号从下面选择，注册成功后加微信：<a href="#wechat">AtomySupport</a>进团队群。没C开头的是国际通用号，都可以当亲友号</small>
+            <ul id="hs">
+            </ul>
+        </section>
+
+        <section>
+            <h4>加微信：　<a name="wechat"></a> AtomySupport</h4>
+            <img src="https://atomy.hzexe.com/pic/wechat.jpg" alt="微信二维码" />
+        </section>
+
+
+        <section>
+            <h2>艾多美注册所需资料</h2>
+            <ul>
+                <li>手机号（主要）</li>
+                <li>身份证正反面照片（主要）</li>
+                <li>收货地址（次要，以后哪天买东西都可以改）</li>
+                <li>亲友号：其实就是推荐人（主要，必须有推荐人才能注册）</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>艾多美相关资料</h2>
+            <ul>
+                <li><a href="https://ch.atomychina.com.cn/" target="_blank">艾多美中文频道</a></li>
+                <li><a href="http://company.atomychina.com.cn/" target="_blank">艾多美中文企业站</a></li>
+                <li><a href="http://global.atomy.com/board.es?mid=a50503000000&bid=0003&cg_code=C01&dept_code=" target="_blank">艾多美国际站-常见问题之会员相关</a>(如果显示是英文则右上角选择Chinese)</li>
+            </ul>
+        </section>
+    </main>
+    <br style="margin-bottom:40px" />
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.3.1/jquery.min.js" crossorigin="anonymous" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                dataType: "json",
+                url: "https://atomy.hzexe.com/api/user",
+                xhrFields: {
+                    withCredentials: true
+                },
+                success: function (data) {
+                    var items = [];
+                    var count = 0;
+                    $.each(data, function (key, val) {
+                        if (count > 30) return;
+                        items.push("<li>" + val + "</li>");
+                        count++;
+                    });
+                    $("#hs").html(items.join(""));
+                }
+            });
+        });
+    </script>
+</body>
+</html>
